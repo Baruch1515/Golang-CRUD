@@ -1,0 +1,34 @@
+{{define "crear"}}
+{{template "cabecera"}}
+
+<div class="card">
+    <div class="card-header">
+        Personas
+    </div>
+    <div class="card-body">
+        <form method="POST" action="/insertar">
+
+            <div class="form-group">
+              <label for="">Nombre:</label>
+              <input type="text"
+                class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre">
+              <small id="helpId" class="form-text text-muted">Aqui vas a escribir el Nombre del usuario al que vas a registrar</small>
+            </div>
+            <div class="form-group">
+              <label for="">Apellido</label>
+              <input type="text"
+                class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Apellido">
+              <small id="helpId" class="form-text text-muted">Aqui vas a escribir el Apellido del usuario al que vas a registrar</small>
+            </div>
+            <div class="form-group">
+                <label for="">Edad</label>
+                <input type="number"
+                  class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Edad">
+                <small id="helpId" class="form-text text-muted">Aqui vas a escribir la Edad del usuario al que vas a registrar</small>
+              </div>
+              <button type="submit" class="btn btn-primary">Crear Usuario</button>
+        </form> 
+    </div>
+</div>
+
+{{end}}
