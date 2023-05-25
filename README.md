@@ -40,20 +40,8 @@ Sigue estos pasos para ejecutar la aplicación:
 
 2. Ejecuta el siguiente comando para compilar el código fuente:
 
-go build
+   ```bash
+   go build
 
-3. Después de compilar exitosamente, ejecuta el archivo binario generado:
-./nombre_del_binario
-
-
-4. La aplicación se ejecutará y estará disponible en http://localhost:8080/. Abre un navegador web e ingresa esa URL.
-
-## Contribuir
-
-Si deseas contribuir a este proyecto, siéntete libre de realizar una bifurcación (fork) y enviar tus mejoras a través de solicitudes de extracción (pull requests).
-
-## Licencia
-
-Este proyecto está bajo la Licencia [MIT](LICENSE).
 
 
