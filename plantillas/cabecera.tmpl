@@ -1,43 +1,55 @@
 {{define "cabecera"}}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Inicio</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <nav class="navbar navbar-expand navbar-light bg-light">
-        <div class="nav navbar-nav">
-            <a id="enlace-inicio" class="nav-item nav-link active" href="/">Inicio<span class="sr-only">(current)</span></a>
-            <a id="enlace-crear" class="nav-item nav-link" href="/crear">Crear</a>
-        </div>
+      <div class="nav navbar-nav">
+        <a id="enlace-inicio" class="nav-item nav-link active" href="/"
+          >Inicio<span class="sr-only">(current)</span></a
+        >
+        <a id="enlace-crear" class="nav-item nav-link" href="/crear">Crear</a>
+      </div>
     </nav>
     <div class="container">
-        <script>
-            // Manejador del evento clic en el enlace "Crear"
-            document.getElementById("enlace-crear").addEventListener("click", function(event) {
-              event.preventDefault();  // Evita el comportamiento predeterminado de recargar la página
-              
-              // Realiza una petición AJAX al servidor utilizando la función fetch()
-              fetch("/crear")
-                .then(function(response) {
-                  return response.text();
-                })
-                .then(function(html) {
-                  // Actualiza el contenido de la página con la respuesta recibida del servidor
-                  document.body.innerHTML = html;
-                })
-                .catch(function(error) {
-                  console.log("Error:", error);
-                });
-            });
+      <script>
+        // Manejador del evento clic en el enlace "Crear"
+        document
+          .getElementById("enlace-crear")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado de recargar la página
 
-          </script>
-          
+            // Realiza una petición AJAX al servidor utilizando la función fetch()
+            fetch("/crear")
+              .then(function (response) {
+                return response.text();
+              })
+              .then(function (html) {
+                // Actualiza el contenido de la página con la respuesta recibida del servidor
+                document.body.innerHTML = html;
+              })
+              .catch(function (error) {
+                console.log("Error:", error);
+              });
+          });
+      </script>
     </div>
-{{end}}
+    {{ end }}
+  </body>
+</html>
