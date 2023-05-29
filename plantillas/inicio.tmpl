@@ -14,12 +14,13 @@
   <tbody>
     {{range .}}
     <tr>
-      <td scope="row">{{.Nombre}}</td>
       <td scope="row">{{.Id}}</td>
+      <td>{{.Nombre}}</td>
       <td>{{.Apellido}}</td>
       <td>{{.Edad}}</td>
       <td>
-        <a href="/eliminar?id={{.Id}}">Eliminar</a>
+        <a class="btn btn-primary"role="button" href="/editar?id={{.Id}}">Editar</a>
+        <a class="btn btn-danger"role="button" href="/eliminar?id={{.Id}}">Eliminar</a>
 
       </td>
     </tr>
