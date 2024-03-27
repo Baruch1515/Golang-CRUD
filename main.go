@@ -33,7 +33,7 @@ type Empleado struct {
 	Apellido string
 	Edad     string
 }
-
+  
 func Editar(w http.ResponseWriter, r *http.Request) {
 	// Obtener el parámetro "id" de la URL
 	idEmpleado := r.URL.Query().Get("id")
